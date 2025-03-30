@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Management</h1>
+        
+        <!-- Add Product Form -->
+        <div class="form-container">
+            <h2>Add New Product</h2>
+            <form id="productForm">
+                <input type="text" id="image_url" placeholder="Image URL" required>
+                <input type="text" id="name" placeholder="Product Name" required>
+                <select id="status" required>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="pending">Pending</option>
+                </select>
+                <input type="number" id="price" placeholder="Price" step="0.01" required>
+                <input type="number" id="stock" placeholder="Stock" required>
+                <input type="datetime-local" id="available_at" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Products List -->
+        <div class="products-list">
+            <h2>Products</h2>
+            <table id="productsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Available At</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
